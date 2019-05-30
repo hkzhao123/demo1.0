@@ -11,9 +11,11 @@
 首先进入[银行网站](http://39.108.172.82:8080)
 <br>
 进行登录操作
-<img src="https://github.com/LanMiao27/demo1.0/blob/master/%E7%99%BB%E5%BD%95.png" width="300" height="150" alt="图片加载失败时，显示这段字"/>
+<img src="https://github.com/LanMiao27/demo1.0/blob/master/%E7%99%BB%E5%BD%95.png" width="300" height="150">
 <br>
-
+输入正确的帐号密码后
+<br>
+来到了导航界面<img src="https://github.com/LanMiao27/demo1.0/blob/master/%E5%AF%BC%E8%88%AA.png" width="300" height="150">
 
 
 
