@@ -29,6 +29,9 @@
 <br>定期：<img src="https://github.com/LanMiao27/demo1.0/blob/master/%E5%AE%9A%E6%9C%9F.png" width="600" height="300">
 <br>基金：<img src="https://github.com/LanMiao27/demo1.0/blob/master/%E5%9F%BA%E9%87%91.png" width="600" height="300">
 <br>黄金：<img src="https://github.com/LanMiao27/demo1.0/blob/master/%E9%BB%84%E9%87%91.png" width="600" height="300">
+<br><br>
+##### 写在后面：
+<br>当然因为时间等等因素的原因，这个项目我们还有许多可以改进的地方，不足之处还请老师同学们加以指正
 
 
 
