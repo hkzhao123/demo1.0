@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Boots</title>
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap-4.0.0.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/user">主页 <span class="sr-only">(current)</span></a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                    业务</a>
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                    <a class="dropdown-item" href="/user/deposit">存储</a>
+                    <a class="dropdown-item" href="/user/withdraw">取款</a>
+                    <a class="dropdown-item" href="/user/transfer">转账</a>
+                    <a class="dropdown-item" href="/user/selectbalance">查询余额</a>
+                    <a class="dropdown-item" href="/user/management">理财项目</a>
+                </div>
+            </li>
+
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+
+        </form>
+        <button class="btn btn-dark" formaction="/"
+        > 注销
+
+        </button>
+    </div>
+</nav>
+<section>
+    <div class="jumbotron text-center mt-auto col-lg-12">
+        <div class="col-12" style="height:600px;center"><br>
+            <div class="col-md-4 pb-1 pb-md-0 col-xl-4 offset-xl-4"><img alt="Card image cap" class="card-img-top"
+                                                                         src="/存钱.jpg"></div>
+            <font size="200"><strong></strong>存储</font> <br>
+            <br>
+            <form action="/user/deposit" class="card-body" method="post">
+                <div class="col-sm-4 col-3 offset-xl-4">
+                    <label class="col-form-label" for="location1"><font size="5">输入存款额度/元</font></label>
+                    <input aria-describedby="basic-addon1" class="form-control" id="pricefrom" name="money" type="text"><br>
+                </div>
+                <button class="btn btn-primary" type="submit"><font size="5">存储</font></button>
+            </form>
+
+
+        </div>
+</section>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap-4.0.0.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+    <select id="loginin" parameterType="java.lang.String" resultType="com.example.demo.entity.User">
+        select
+        *
+        from user
+        where u_id = #{u_id} and password = #{password};
+    </select>
+    <select id="sbalance" parameterType="java.lang.String" resultType="java.lang.Double">
+       select
+       money
+       from  balance
+       where u_id= #{u_id}
+   </select>
+    <select id="withdraw">
+        update balance set money = #{money}
+        where u_id = #{u_id}
+    </select>
+    <select id="deposit">
+        update balance set money = #{money}
+        where u_id = #{u_id}
+    </select>
+    <select id="buyGold">
+        update gold set gold_number=gold_number+#{money}
+        where u_id=#{u_id}
+    </select>
+    <select id="SaleGold">
+        update gold set gold_number=gold_number-#{money}
+        where u_id=#{u_id}
+    </select>
+    <select id="getGold" resultType="java.lang.Double">
+        select gold_number
+        from gold
+        where u_id=#{u_id}
+    </select>
+    <select id="getDate" resultType="java.util.Date">
+        select b_time
+        from gold
+        where d_id=#{d_id}
+    </select>
+    <select id="getprice" resultType="java.lang.Integer">
+        select price
+        from gold_price
+        where day=#{day}
+    </select>
+    <select id="sfund" parameterType="java.lang.String" resultType="java.lang.Double">
+        select f_money
+        from fund
+        where u_id = #{u_id}
+    </select>
+    <update id="buyfund"  >
+      update fund set f_money = #{money}
+      where u_id = #{u_id}
+    </update>
+    <select id="sregular" parameterType="java.lang.String" resultType="com.example.demo.entity.Re">
+        select  *
+        from n_deposit
+        where u_id = #{u_id};
+    </select>
+    <insert id="iregular">
+        insert into n_deposit(u_id,c_time,d_time,d_money,duraion) values (#{u_id},#{c_time},#{d_time},#{d_money},#{duration});
+    </insert>
+</mapper>

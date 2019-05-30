@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Boots</title>
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap-4.0.0.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/user">主页 </a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                    业务</a>
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                    <a class="dropdown-item" href="/user/deposit">存储</a>
+                    <a class="dropdown-item" href="/user/withdraw">取款</a>
+                    <a class="dropdown-item" href="/user/transfer">转账</a>
+                    <a class="dropdown-item" href="/user/selectbalance">查询余额</a>
+                    <a class="dropdown-item" href="/user/management">理财项目</a>
+                </div>
+            </li>
+
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+
+        </form>
+        <button class="btn btn-dark" formaction="/"
+        > 注销
+
+        </button>
+    </div>
+</nav>
+<section>
+    <div class="jumbotron text-center mt-auto col-lg-12">
+        <div class="col-12" style="height:600px;center"><br>
+            <div class="col-md-4 pb-1 pb-md-0 offset-xl-5 col-xl-2"><img alt="Card image cap" class="card-img-top"
+                                                                         src="/活期.jpg"></div>
+            <br>
+            <font size="200"><strong></strong>您当前帐户的余额是：</font>
+            <font size="200"><strong th:text="${userbalance}"></strong>元</font> <br><br>
+            <font size="200"><strong></strong>当前活期利率：1%（年利率）</font> <br>
+
+
+        </div>
+</section>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap-4.0.0.js"></script>
+
+</body>
+
+</html>

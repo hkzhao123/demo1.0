@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Boots</title>
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap-4.0.0.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/user">主页 <span class="sr-only">(current)</span></a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                    业务</a>
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                    <a class="dropdown-item" href="">存储</a>
+                    <a class="dropdown-item" href="">取款</a>
+                    <a class="dropdown-item" href="">转账</a>
+                    <a class="dropdown-item" href="">查询余额</a>
+                    <a class="dropdown-item" href="">理财项目</a>
+                </div>
+            </li>
+
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+
+        </form>
+        <button class="btn btn-dark" formaction="/"
+        > 注销
+
+        </button>
+    </div>
+</nav>
+<section>
+    <div class="jumbotron text-center mt-auto col-lg-100">
+        <div class="col-12" style="height:700px;center">
+            <div class="row text-center">
+                <div class="col-md-4 pb-1 pb-md-0 offset-xl-0 col-xl-4"><img alt="Card image cap" class="card-img-top"
+                                                                             src="/定期.jpg"></div>
+                <form class="card-body" method="post" action="/user/management/regularSave/in">
+                    <f class="col-sm-4 col-3 offset-xl-1 col-xl-8">
+                        <label class="col-form-label" for="location1"><font size="7">已存定期：</font></label><br>
+                        <div class="form-group row">
+                            <label class="col-form-label" for="location1"><font size="5">日期：<strong  th:text="${re.sd()}"
+                                    ></strong></font></label> <!-接口->
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label" for="location1"><font size="5">额度：<strong th:text="${re.getD_money()}"
+                                    ></strong></font></label> <!-接口->
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label" for="location1"><font size="5">结束时间：<strong th:text="${re.ed()}"
+                                    ></strong></font></label> <!-接口->
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label" for="location1"><font size="5">存款ID：<strong th:text="${re.getU_id()}"
+                                    ></strong></font></label> <!-接口->
+                        </div>
+                        <label class="col-form-label" for="location1"><font size="7">存定期：</font></label><br>
+
+                        <div class="form-group row">
+                            <form action="/user/management/regularSave/in"  method="post">
+                            <label class="col-form-label" for="location1"><font size="5">额度/元：</font></label>
+                            <input aria-describedby="basic-addon1" class="form-control" id="pricefrom" name="money"
+                                   type="text">
+                        <!-name->
+
+                            <label class="col-form-label" for="location2"><font size="5">时长：</font></label>
+                            <select class="form-control" id="location1" name="duration">
+                                <option value="">选择天数</option>
+                                <option value="30">30天</option>
+                                <option value="90">90天</option>
+                                <option value="360">360天</option>
+                            </select>
+                </form>
+                        </div>
+
+                        <button class="btn btn-primary" type="submit"><font size="5">确定</font></button>
+
+
+                    </div>
+        </div>
+
+
+                </form>
+
+
+            </div>
+</section>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap-4.0.0.js"></script>
+
+</body>
+
+</html>
