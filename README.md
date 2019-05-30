@@ -10,8 +10,8 @@
 <br>
 首先进入[银行网站](http://39.108.172.82:8080)
 <br>
-进行登录操作![](https://github.com/LanMiao27/demo1.0/blob/master/%E7%99%BB%E5%BD%95.png)
-<img src="https://github.com/LanMiao27/demo1.0/blob/master/%E7%99%BB%E5%BD%95.png" width="150" height="150" alt="图片加载失败时，显示这段字"/>
+进行登录操作
+<img src="https://github.com/LanMiao27/demo1.0/blob/master/%E7%99%BB%E5%BD%95.png" width="300" height="150" alt="图片加载失败时，显示这段字"/>
 <br>
 
 
